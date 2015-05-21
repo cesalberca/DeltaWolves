@@ -1,0 +1,42 @@
+#footer {
+  background-color: $black;
+}
+
+#footer .footer-container {
+  @include container(80em);
+  padding: 4rem 0;
+}
+
+#footer .footer-element {
+  @include span(2);
+}
+
+#footer .footer-element:first-child {
+  @include span(3);
+}
+
+
+#footer .footer-elemet:last-child {
+  @include span(3 last);
+}
+
+#footer ul {
+  margin: 0;
+  color: gray;
+}
+
+#footer ul > img {
+  padding-bottom: .5rem;
+
+}
+
+#footer ul li:first-child {
+  color: $main-color;
+  font-family: $heading-font-family;
+  font-size: 1.2rem;
+}
+
+#footer li {
+  list-style: none;
+  padding: .25rem 0;
+}

@@ -1,0 +1,54 @@
+//Header
+#header  {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  visibility: none;
+  position: fixed;
+}
+
+#header .logo-container {
+  position: relative;
+}
+
+#header .logo {
+  margin-left: 30px;
+  position: absolute;
+  top: 65%;
+  height: 42px;
+  margin-top: 12px;
+}
+
+#header ul {
+  margin: 0;
+}
+
+.header-links {
+  float: right;
+  margin-right: 40px;
+
+}
+
+.header-links li {
+  font-size: 1.5em;
+  display: inline-block;
+  padding: 15px 20px;
+  font-family: $heading-font-family;
+}
+
+.header-links a{
+  color: $main-color;
+}
+
+.header-links #active{
+  padding: 20px 0px;
+  border-bottom: 2px $main-color solid;
+}
+
+.header-links a:hover{
+  transition: all .25s ease-in;
+  color: rgba(247, 188, 28, 1);
+  padding: 20px 0px;
+  border-bottom: 2px rgba(247, 188, 28, 1) solid;
+}

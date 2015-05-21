@@ -1,0 +1,69 @@
+/*
+ * Variables
+ */
+
+$base-font-family: 'Libre Baskerville', serif;
+$base-font-size: 14px;
+$base-font-weight: 300;
+
+$heading-font-family:'Philosopher', sans-serif;
+$heading-font-weight: 700;
+
+
+/*
+ * Base styles
+ */
+
+body {
+  color: $black;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+}
+
+p {
+  color: $black;
+  font-family: $base-font-family;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+}
+
+h1, h2 { line-height: 1.1; }
+h3, h4 { line-height: 1.3; }
+h1 { font-size: 400%; letter-spacing: -2px; }
+h2 { font-size: 250%; letter-spacing: -1px; }
+h3 { font-size: 200%; }
+h4 { font-size: 180%; }
+h5 { font-size: 130%; }
+
+
+.italic {
+  font-style: italic;
+}
+
+.italic-bold {
+  font-style: italic;
+  font-wieght: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: $light-blue;
+}
+
+a:hover {
+  color: $light-blue;
+}
+
+a:visited {
+
+}

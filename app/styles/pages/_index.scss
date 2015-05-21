@@ -1,0 +1,462 @@
+#main {
+}
+
+#skrollr-body {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-body{
+  background-color: $black;
+}
+
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+}
+
+//About
+.about {
+  background-color: $white;
+}
+
+.about-container {
+  @include container(80em);
+}
+
+.about-container div:first-child {
+  margin-top: 2rem;
+}
+
+.about p {
+  line-height: 35px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.about-element {
+  padding: 4rem 0;
+  @include span(8 of 12);
+  position: relative;
+}
+
+
+.about-element:nth-child(even) {
+  @include push(4 of 12);
+}
+
+.about-element h1 {
+  position: absolute;
+  right: 20%;
+  top: 30%;
+  margin: 0;
+  z-index: 0;
+  font-size: 8rem;
+
+}
+
+.about-element h1 > a{
+  position: relative;
+  text-decoration: none;
+  color: $main-color;
+}
+
+.about-element:hover h1 > a {
+  color: $main-color;
+}
+
+
+.about-element h1 > a:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  bottom: 0;
+  left: 0;
+  background-color: $main-color;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+.about-element:hover h1 > a:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+.about-element p{
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width:480px) {
+  .about-container {
+    @include container(24em);
+  }
+
+  .about-element {
+    @include full;
+    padding: 2rem 0;
+  }
+
+  .about-element:nth-child(even) {
+    margin-left: 0 !important;
+  }
+
+  .about-element h1 {
+    right: 12%;
+    font-size: 6rem;
+  }
+}
+
+
+//Who
+
+.triangle {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 50%;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: $white transparent transparent transparent;
+}
+
+.services {
+  background-color: $black;
+}
+
+.services-container{
+  padding: 5rem 0;
+  @include container(80em);
+}
+
+.services-element {
+  color: white;
+}
+
+.services-element > h2 {
+  text-align: center;
+}
+
+.services-element > div {
+  font-size: 4rem;
+  span {
+    color: $main-color;
+  }
+}
+
+#slick span {
+  text-align: center;
+}
+
+.tooltipster-default {
+  padding: 0rem 2rem;
+  border: none;
+  border-radius: 0;
+	background: #fff;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+	color: #2c2c2c;
+}
+.tooltipster-default .tooltipster-content {
+	font-family: $base-font-family;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+}
+
+.process-triangle {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 50%;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: $black transparent transparent transparent;
+}
+
+.process {
+  background-color: rgb(176, 176, 176) !important;
+}
+
+.process-container {
+  @include container(80em);
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.process-container > h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.process-element {
+  @include span(4 of 12);
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.process-element:nth-child(3n) {
+  @include span(4 of 12 last);
+  border: none;
+}
+
+.process-element h2 {
+  color: $black;
+}
+
+.process-element span {
+  padding-right: .25rem;
+  font-family: $base-font-family;
+  font-size: 1.25rem;
+  color: $main-color;
+}
+
+.process-element p {
+  line-height: 35px;
+  font-size: 1.2rem;
+}
+
+@media (max-width:480px) {
+
+  .process-container {
+    @include container(24em);
+  }
+
+  .process-element {
+    @include span(12 of 12);
+    border: none;
+  }
+
+  .process-element:nth-child(3n) {
+    @include span(12 of 12 last);
+  }
+}
+
+
+//Who
+.who{
+  background-color: $white;
+}
+
+.who-triangle {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 50%;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: #b0b0b0 transparent transparent transparent;
+}
+
+.who-container {
+  height: 20rem;
+  background-image: url('../images/who.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.who-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.who-hero h3 {
+  color: $main-color;
+  font-size: 3rem;
+}
+
+.who-element {
+  @include container(40rem);
+  background-color: $white;
+  padding: 2rem 4rem;
+}
+
+.who-element p {
+  line-height: 35px;
+  font-size: 1rem;
+}
+
+.who-element i {
+  padding-left: .5rem;
+}
+
+
+//Values
+.values {
+  color: $white;
+  @include container(100%);
+  padding-top: 2rem;
+  background-color: $black;
+}
+
+.values .values-element {
+  @include span(3 of 12);
+  @include push(1 of 12);
+}
+
+.values > .values-element:last-child {
+  @include span(3 of 12 last);
+}
+
+.values h3 {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  font-size: 2rem;
+  color: $main-color;
+}
+
+.values ul {
+  list-style:none;
+right: 20px;
+  position: relative;
+  top: -65px;
+}
+
+
+.values li span {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .values .values-element {
+    @include span(10 of 12);
+    float: right;
+  }
+
+  .values > .values-element:last-child {
+    @include span(10 of 12);
+    float: right;
+  }
+
+}
+
+
+//Work
+.work {
+  padding: 5rem 0;
+  background-color: $white;
+  @include container(40rem);
+}
+
+.work-element {
+
+}
+
+.work-element p {
+  color: $black;
+  line-height: 35px;
+  font-size: 1.2rem;
+}
+
+@media (max-width:480px) {
+  .work {
+    @include container(24rem);
+  }
+  .work-element p{
+    font-size: 1rem;
+    line-height: 30px;
+  }
+}
+
+
+//hello
+.hello {
+  background-color: $white;
+}
+
+.hello-container {
+  background-image: url('../images/2.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hello-element {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.hello-element > div{
+  color: $main-color;
+}
+
+.hello-input {
+  display: flex;
+  justify-content: center;
+}
+
+.hello-element a, .hello-element i{
+  color: $white;
+  font-size: 2rem;
+}
+
+.hello-element i {
+  padding-right: 1rem;
+}
+
+.follow {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  background-color: $main-color;
+  z-index: 100;
+}
+
+.follow ul {
+  list-style: none;
+  padding: 0;
+}
+
+.follow li{
+  border-bottom: 1px solid rgba(255, 255, 255, .7);
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+.follow li:hover{
+  background-color: rgba(239, 179, 16, .2);
+}
+
+.follow i{
+  padding:1rem;
+  color: white;
+  transition: all .25s ease-in;
+}
+
+.follow i:hover {
+ color: rgba(255, 255, 255, .8);
+}
+
+@media (max-width:480px) {
+    .hello h1 {
+      font-size:300%;
+    }
+
+    .hello-input a{
+      font-size: 200%;
+    }
+}

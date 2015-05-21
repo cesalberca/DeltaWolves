@@ -1,0 +1,56 @@
+.index-background {
+  box-sizing: border-box;
+  background: url("../images/gold_bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.index-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gold-medalion-container {
+
+}
+
+.gold-medalion {
+  padding: 60px;
+  transition-duration: 1s;
+
+  // transform-origin: 200px 200px;
+  /* bring your own prefixes */
+}
+
+.gold-medalion:hover {
+  transform: scale(1.05);
+}
+
+.enter-container {
+  margin-top: -41%;
+  @include container(100%);
+}
+
+.enter-gold, .enter-silver {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.enter-container a {
+  background-color: $black;
+}
+
+.enter-gold {
+  color: $main-color;
+  @include span(6 of 12);
+}
+
+.enter-silver{
+  @include span(6 of 12 last);
+  color: gray;
+}

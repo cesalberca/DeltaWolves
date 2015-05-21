@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Delta Wolves</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/slick.js/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick.js/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower_components/tooltipster/css/tooltipster.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Philosopher:400,700,400italic,700italic|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body id="main">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="header">
+      <span class="logo-container">
+        <a href="index.html"><img class="logo" src="images/main_logo.png" alt="Delta Wolves"></a>
+      </span>
+      <div class="header-links-container ">
+        <ul class="header-links">
+          <li><a href="main.html" id="active">Inicio</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="test">
+      <form name = "myform">
+      <p>ENTER USER NAME <input type="text" name="username"> ENTER PASSWORD <input type="password" name="pword">
+      <input type="button" value="Check In" name="Submit" onclick= "validate()">
+      </p>
+
+      </form>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/slick.js/slick/slick.min.js"></script>
+    <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+    <script src="bower_components/skrollr/src/skrollr.js"></script>
+    <script src="bower_components/scroll-reveal/dist/scrollReveal.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <script  type = "text/javascript">
+
+        var count = 2;
+        function validate() {
+        var un = document.myform.username.value;
+        var pw = document.myform.pword.value;
+        var valid = false;
+
+        var unArray = ["DeltaWolves"];  // as many as you like - no comma after final entry
+        var pwArray = ["unetealamanada"];  // the corresponding passwords;
+
+        for (var i=0; i <unArray.length; i++) {
+        if ((un == unArray[i]) && (pw == pwArray[i])) {
+        valid = true;
+        break;
+        }
+        }
+
+        if (valid) {
+        alert ("Login was successful");
+        window.location = "main.html";
+        return false;
+        }
+
+        var t = " tries";
+        if (count == 1) {t = " try"}
+
+        if (count >= 1) {
+        alert ("Invalid username and/or password.  You have " + count + t + " left.");
+        document.myform.username.value = "";
+        document.myform.pword.value = "";
+        setTimeout("document.myform.username.focus()", 25);
+        setTimeout("document.myform.username.select()", 25);
+        count --;
+        }
+
+        else {
+        alert ("Still incorrect! You have no more tries left!");
+        document.myform.username.value = "No more tries allowed!";
+        document.myform.pword.value = "";
+        document.myform.username.disabled = true;
+        document.myform.pword.disabled = true;
+        return false;
+        }
+
+        }
+
+
+
+
+        </script>
+</body>
+</html>
