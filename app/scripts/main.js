@@ -49,7 +49,8 @@ $( document ).ready(function() {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows: false
         }
       }
     ]
@@ -120,26 +121,47 @@ $( document ).ready(function() {
 
 });
 
-var plan = require('flightplan');
+var lastId,
+    topMenu = $('#header'),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find('a'),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr('href'));
+      if (item.length) { return item; }
+    });
 
-// configuration
-plan.target('production', [
-  {
-    host: 's575161373.mialojamiento.es',
-    username: 'u80820258',
-    port: 2222,
-    agent: process.env.SSH_AUTH_SOCK
-  },
-]);
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr('href'),
+      offsetTop = href === '#' ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
 
-// run commands on localhost
-plan.local(function(local) {
-  // uncomment these if you need to run a build on your machine first
-  // local.log('Run build');
-  // local.exec('gulp build');
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
 
-  local.log('Copy files to remote hosts');
-  var filesToCopy = local.exec('git ls-files', {silent: true});
-  // rsync files to all the destination's hosts
-  local.transfer(filesToCopy, '~/www/');
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : '';
+
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass('active')
+         .end().filter('[href=#'+id+']').parent().addClass('active');
+   }
 });

@@ -342,6 +342,25 @@ module.exports = function (grunt) {
       }
     },
 
+    cdn: {
+              options: {
+                  /** @required - root URL of your CDN (may contains sub-paths as shown below) */
+                  cdn: '//maxcdn.bootstrapcdn.com/',
+                  /** @optional  - if provided both absolute and relative paths will be converted */
+                  flatten: false,
+                  /** @optional  - if provided will be added to the default supporting types */
+                  supportedTypes: { 'phtml': 'html' }
+              },
+              dist: {
+                  /** @required  - gets sources here, may be same as dest  */
+                  cwd: './dist/static/',
+                  /** @required  - puts results here with respect to relative paths  */
+                  dest: './dist/static/',
+                  /** @required  - files to process */
+                  src: ['index.html', '*.css', '{,*/}*.html', '{,**/}*.html'],
+              }
+          },
+
     // Generates a custom Modernizr build that includes only the tests you
     // reference in your app
     modernizr: {

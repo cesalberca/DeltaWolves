@@ -45,9 +45,6 @@
 |
 `– main.scss             # primary Sass file*/
 
-
-
-
 // Partials
 @import "partials/normalize";
 @import "partials/default";
@@ -65,7 +62,7 @@
 //  Layout
 @import "layout/grid";
 @import "layout/header";
-@import "layout/footer";
+// @import "layout/footer";
 
 // Pages
 @import "pages/index.scss";

@@ -41,7 +41,7 @@
   color: $main-color;
 }
 
-.header-links #active{
+.active{
   padding: 20px 0px;
   border-bottom: 2px $main-color solid;
 }
@@ -51,4 +51,12 @@
   color: rgba(247, 188, 28, 1);
   padding: 20px 0px;
   border-bottom: 2px rgba(247, 188, 28, 1) solid;
+}
+
+
+@media (max-width:480px) {
+  .header-links li {
+    font-size: 1em;
+    padding: 17px 10px;
+  }
 }
