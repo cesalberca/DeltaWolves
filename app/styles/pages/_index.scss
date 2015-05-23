@@ -189,7 +189,7 @@ img{
 }
 
 .process {
-  background-color: rgb(176, 176, 176) !important;
+  background-color: $white;
 }
 
 .process-container {
@@ -260,7 +260,7 @@ img{
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: #b0b0b0 transparent transparent transparent;
+  border-color: $white transparent transparent transparent;
 }
 
 .who-container {

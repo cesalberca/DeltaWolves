@@ -213,7 +213,7 @@ module.exports = function (grunt) {
             '<%= config.dist %>/scripts/{,*/}*.js',
             '<%= config.dist %>/styles/{,*/}*.css',
             '<%= config.dist %>/images/{,*/}*.*',
-            '<%= config.dist %>/styles/fonts/{,*/}*.*',
+            // '<%= config.dist %>/styles/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
         }
@@ -331,6 +331,19 @@ module.exports = function (grunt) {
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
+        }, {
+          expand: true,
+          flatten: true,
+          cwd: 'bower_components/fontawesome/fonts',
+          dest: '<%= config.dist %>/fonts',
+          src: ['*.*'],
+          filter: 'isFile'
+        }, {
+          expand: true,
+          flatten: true,
+          cwd: 'bower_components/slick.js/slick/fonts',
+          src: '*.*',
+          dest: '<%= config.dist %>/styles/fonts'
         }]
       },
       styles: {
@@ -342,24 +355,8 @@ module.exports = function (grunt) {
       }
     },
 
-    cdn: {
-              options: {
-                  /** @required - root URL of your CDN (may contains sub-paths as shown below) */
-                  cdn: '//maxcdn.bootstrapcdn.com/',
-                  /** @optional  - if provided both absolute and relative paths will be converted */
-                  flatten: false,
-                  /** @optional  - if provided will be added to the default supporting types */
-                  supportedTypes: { 'phtml': 'html' }
-              },
-              dist: {
-                  /** @required  - gets sources here, may be same as dest  */
-                  cwd: './dist/static/',
-                  /** @required  - puts results here with respect to relative paths  */
-                  dest: './dist/static/',
-                  /** @required  - files to process */
-                  src: ['index.html', '*.css', '{,*/}*.html', '{,**/}*.html'],
-              }
-          },
+
+
 
     // Generates a custom Modernizr build that includes only the tests you
     // reference in your app
