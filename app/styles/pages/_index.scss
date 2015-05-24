@@ -28,17 +28,19 @@ img{
 }
 
 .about-container {
+
+}
+
+.about-element-container {
   @include container(80em);
 }
 
-.about-container div:first-child {
-  margin-top: 2rem;
+.about-element-container svg {
+  @include span(4 of 12);
 }
 
-.about p {
-  line-height: 35px;
-  font-size: 1.2rem;
-  margin-top: 2rem;
+.about-element-container svg:nth-child(even) {
+  @include span(4 of 12 last);
 }
 
 .about-element {
@@ -47,9 +49,14 @@ img{
   position: relative;
 }
 
+.about p {
+  line-height: 35px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
 
 .about-element:nth-child(even) {
-  @include push(4 of 12);
+  @include span(8 of 12 last);
 }
 
 .about-element h1 {
@@ -59,7 +66,6 @@ img{
   margin: 0;
   z-index: 0;
   font-size: 8rem;
-
 }
 
 .about-element h1 > a{
@@ -71,7 +77,6 @@ img{
 .about-element:hover h1 > a {
   color: $main-color;
 }
-
 
 .about-element h1 > a:before{
   content: "";
@@ -88,14 +93,11 @@ img{
   transition: all 0.3s ease-in-out 0s;
 }
 
-
 .about-element:hover h1 > a:before{
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
-
 
 .about-element p{
   position: relative;
@@ -285,10 +287,11 @@ img{
 }
 
 .who-element {
-  @include container(40rem);
+  @include container(40em);
   background-color: $white;
   padding: 2rem 4rem;
 }
+
 
 .who-element p {
   line-height: 35px;
@@ -297,6 +300,13 @@ img{
 
 .who-element i {
   padding-left: .5rem;
+}
+
+@media (max-width: 480px) {
+  .who-element {
+    @include container(24em);
+    padding: 0;
+  }
 }
 
 
@@ -369,7 +379,7 @@ right: 20px;
 
 @media (max-width:480px) {
   .work {
-    @include container(24rem);
+    @include container(24em);
   }
   .work-element p{
     font-size: 1rem;
