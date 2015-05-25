@@ -252,6 +252,11 @@ html,body {
   color: $main-color;
 }
 
+.process > h3 {
+  text-align: center;
+  color: $gray;
+}
+
 .process-element p {
   line-height: 35px;
   font-size: 1.2rem;
