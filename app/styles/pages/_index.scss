@@ -1,4 +1,9 @@
+html,body {
+  height: 100%; min-height: 100%;
+}
+
 #main {
+
 }
 
 #skrollr-body {
@@ -12,14 +17,24 @@
 }
 
 
-img{
-    display: block;
-    width: 100%;
-    height: auto;
+//Hero
+.hero-web {
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/hero-web.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.slick-slider {
-  margin-bottom: 0;
+.hero-element {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+.hero-element i {
+  color: white;
 }
 
 //About
@@ -35,12 +50,21 @@ img{
   @include container(80em);
 }
 
-.about-element-container svg {
+// .about-svg-container svg {
+//   width: 100%;
+//   height: auto;
+// }
+
+.about-svg-container {
   @include span(4 of 12);
 }
 
-.about-element-container svg:nth-child(even) {
-  @include span(4 of 12 last);
+.about-element-container:nth-child(odd) .about-svg-container {
+  @include span(last);
+}
+
+.about-svg-container svg {
+  margin: 4rem;
 }
 
 .about-element {
