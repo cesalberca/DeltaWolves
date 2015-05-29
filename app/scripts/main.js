@@ -2,11 +2,10 @@
 
 
 $( document ).ready(function() {
-
   $(window).scroll(function () {
     $('.sect').each(function () {
         var w = $(window).scrollTop();
-        var t = $(this).offset().top - 100;
+        var t = $(this).offset().top - 60;
         if (w > t) {
             $('header').css({
                 'background-color': $(this).css('background-color')
@@ -19,7 +18,6 @@ $( document ).ready(function() {
   /*globals skrollr, scrollReveal */
   skrollr.init({
     forceHeight: false
-
   });
 
   window.sr = new scrollReveal();
@@ -150,8 +148,9 @@ $(window).scroll(function(){
 
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
+     if ($(this).offset().top < fromTop) {
        return this;
+     }
    });
    // Get the id of the current element
    cur = cur[cur.length-1];

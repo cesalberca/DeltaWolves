@@ -2,6 +2,10 @@ html,body {
   height: 100%; min-height: 100%;
 }
 
+img {
+  pointer-events: none;
+}
+
 #main {
 
 }
@@ -30,16 +34,25 @@ html,body {
 .hero-element {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 90%;
 }
 
 .hero-element i {
-  color: white;
+  color: $main-color;
+}
+
+@media (max-width:480px) {
+  .hero-element {
+    left:50%;
+  }
+  .hero-web {
+    height: 60%;
+  }
 }
 
 //About
 .about {
-  background-color: $white;
+  background-color: $scarlet;
 }
 
 .about-container {
@@ -67,16 +80,31 @@ html,body {
   margin: 4rem;
 }
 
+@media (max-width:480px) {
+
+
+}
+
+
 .about-element {
   padding: 4rem 0;
   @include span(8 of 12);
-  position: relative;
+}
+
+#about-element-2{
+  float: right;
+  margin: 0;
+}
+
+.about-element-container:nth-child(2) > .about-svg-container {
+  float: left;
 }
 
 .about p {
+  color: rgba(0, 0, 0, 0.6);
+  // color: $white;
   line-height: 35px;
   font-size: 1.2rem;
-  margin-top: 2rem;
 }
 
 .about-element:nth-child(even) {
@@ -84,43 +112,14 @@ html,body {
 }
 
 .about-element h1 {
-  position: absolute;
-  right: 20%;
-  top: 30%;
-  margin: 0;
-  z-index: 0;
-  font-size: 8rem;
+  font-size: 4rem;
+  margin-bottom: 0;
 }
 
-.about-element h1 > a{
+.about-element h1 {
   position: relative;
   text-decoration: none;
-  color: $main-color;
-}
-
-.about-element:hover h1 > a {
-  color: $main-color;
-}
-
-.about-element h1 > a:before{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  bottom: 0;
-  left: 0;
-  background-color: $main-color;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.about-element:hover h1 > a:before{
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  color: $white;
 }
 
 .about-element p{
@@ -142,9 +141,17 @@ html,body {
     margin-left: 0 !important;
   }
 
+  .about-svg-container {
+    @include span(12 of 12);
+  }
+  .about-svg-container svg {
+    margin: 0;
+  }
   .about-element h1 {
-    right: 12%;
-    font-size: 6rem;
+    font-size: 3rem;
+  }
+  .about-element:nth-child(even) {
+    @include span(12 of 12);
   }
 }
 
@@ -158,7 +165,7 @@ html,body {
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: $white transparent transparent transparent;
+  border-color: $scarlet transparent transparent transparent;
 }
 
 .services {
@@ -248,7 +255,7 @@ html,body {
 .process-element span {
   padding-right: .25rem;
   font-family: $base-font-family;
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: $main-color;
 }
 
@@ -274,7 +281,7 @@ html,body {
   }
 
   .process-element:nth-child(3n) {
-    @include span(12 of 12 last);
+    @include span(12 of 12);
   }
 }
 
@@ -336,6 +343,9 @@ html,body {
     @include container(24em);
     padding: 0;
   }
+  .who-hero h3 {
+    font-size: 2rem;
+  }
 }
 
 
@@ -343,8 +353,18 @@ html,body {
 .values {
   color: $white;
   @include container(100%);
-  padding-top: 2rem;
   background-color: $black;
+}
+
+.values-hero {
+  @include container(100%);
+}
+
+.values-hero img{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .values .values-element {
@@ -372,7 +392,7 @@ right: 20px;
 
 
 .values li span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 480px) {
@@ -422,12 +442,17 @@ right: 20px;
   background-color: $white;
 }
 
-.hello-container {
+.hello-hero {
+  height: 20rem;
   background-image: url('../images/2.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.hello-container {
+
 }
 
 .hello-element {
@@ -456,46 +481,12 @@ right: 20px;
   padding-right: 1rem;
 }
 
-.follow {
-  position: fixed;
-  right: 0;
-  top: 25%;
-  background-color: $main-color;
-  z-index: 100;
-}
-
-.follow ul {
-  list-style: none;
-  padding: 0;
-}
-
-.follow li{
-  border-bottom: 1px solid rgba(255, 255, 255, .7);
-  &:last-child{
-    border-bottom: none;
-  }
-}
-
-.follow li:hover{
-  background-color: rgba(239, 179, 16, .2);
-}
-
-.follow i{
-  padding:1rem;
-  color: white;
-  transition: all .25s ease-in;
-}
-
-.follow i:hover {
- color: rgba(255, 255, 255, .8);
-}
-
 @media (max-width:480px) {
     .hello h1 {
-      font-size:300%;
+      font-size: 2rem;
     }
 
-    .hello-input a{
-      font-size: 200%;
+    .hello a {
+      font-size: 1rem;
     }
 }
