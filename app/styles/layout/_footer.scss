@@ -1,5 +1,5 @@
 #footer {
-  background-color: $black;
+  background-color: colors('dark');
 }
 
 #footer .footer-container {
@@ -31,7 +31,7 @@
 }
 
 #footer ul li:first-child {
-  color: $main-color;
+  color: colors('primary');
   font-family: $heading-font-family;
   font-size: 1.2rem;
 }

@@ -17,7 +17,7 @@ img {
 }
 
 .wrapper-body{
-  background-color: $black;
+  background-color: colors('dark');
 }
 
 
@@ -38,7 +38,7 @@ img {
 }
 
 .hero-element i {
-  color: $main-color;
+  color: colors('primary');
 }
 
 @media (max-width:480px) {
@@ -52,7 +52,7 @@ img {
 
 //About
 .about {
-  background-color: $scarlet;
+  background-color: colors('accent');
 }
 
 .about-container {
@@ -102,7 +102,7 @@ img {
 
 .about p {
   color: rgba(0, 0, 0, 0.6);
-  // color: $white;
+  // color: colors('light');
   line-height: 35px;
   font-size: 1.2rem;
 }
@@ -119,7 +119,7 @@ img {
 .about-element h1 {
   position: relative;
   text-decoration: none;
-  color: $white;
+  color: colors('light');
 }
 
 .about-element p{
@@ -165,11 +165,11 @@ img {
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: $scarlet transparent transparent transparent;
+  border-color: colors('accent') transparent transparent transparent;
 }
 
 .services {
-  background-color: $black;
+  background-color: colors('dark');
 }
 
 .services-container{
@@ -188,7 +188,7 @@ img {
 .services-element > div {
   font-size: 4rem;
   span {
-    color: $main-color;
+    color: colors('primary');
   }
 }
 
@@ -218,11 +218,11 @@ img {
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: $black transparent transparent transparent;
+  border-color: colors('accent') transparent transparent transparent;
 }
 
 .process {
-  background-color: $white;
+  background-color: colors('light');
 }
 
 .process-container {
@@ -249,19 +249,19 @@ img {
 }
 
 .process-element h2 {
-  color: $black;
+  color: colors('dark');
 }
 
 .process-element span {
   padding-right: .25rem;
   font-family: $base-font-family;
   font-size: 2rem;
-  color: $main-color;
+  color: colors('primary');
 }
 
 .process > h3 {
   text-align: center;
-  color: $gray;
+  color: alpha-color('black', 'secondary');
 }
 
 .process-element p {
@@ -288,7 +288,7 @@ img {
 
 //Who
 .who{
-  background-color: $white;
+  background-color: colors('light');
 }
 
 .who-triangle {
@@ -298,7 +298,7 @@ img {
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: $white transparent transparent transparent;
+  border-color: colors('light') transparent transparent transparent;
 }
 
 .who-container {
@@ -318,13 +318,13 @@ img {
 }
 
 .who-hero h3 {
-  color: $main-color;
+  color: colors('primary');
   font-size: 3rem;
 }
 
 .who-element {
   @include container(40em);
-  background-color: $white;
+  background-color: colors('light');
   padding: 2rem 4rem;
 }
 
@@ -351,9 +351,9 @@ img {
 
 //Values
 .values {
-  color: $white;
+  color: colors('light');
   @include container(100%);
-  background-color: $black;
+  background-color: colors('dark');
 }
 
 .values-hero {
@@ -380,7 +380,7 @@ img {
   transform: rotate(90deg);
   transform-origin: left top 0;
   font-size: 2rem;
-  color: $main-color;
+  color: colors('primary');
 }
 
 .values ul {
@@ -412,7 +412,7 @@ right: 20px;
 //Work
 .work {
   padding: 5rem 0;
-  background-color: $white;
+  background-color: colors('light');
   @include container(40rem);
 }
 
@@ -421,7 +421,7 @@ right: 20px;
 }
 
 .work-element p {
-  color: $black;
+  color: colors('dark');
   line-height: 35px;
   font-size: 1.2rem;
 }
@@ -439,7 +439,7 @@ right: 20px;
 
 //hello
 .hello {
-  background-color: $white;
+  background-color: colors('light');
 }
 
 .hello-hero {
@@ -464,7 +464,7 @@ right: 20px;
 }
 
 .hello-element > div{
-  color: $main-color;
+  color: colors('primary');
 }
 
 .hello-input {
@@ -473,7 +473,7 @@ right: 20px;
 }
 
 .hello-element a, .hello-element i{
-  color: $white;
+  color: colors('light');
   font-size: 2rem;
 }
 

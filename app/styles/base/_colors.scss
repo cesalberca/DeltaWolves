@@ -1,0 +1,76 @@
+//  Map of colors
+$colors: (
+  'primary': #EFB310,
+  'accent': #6F1D1B,
+  'secondary': #BF8816,
+  'dark': #231F20,
+  'light': #FFF,
+  'neutral': #949494,
+  'links': #2D9FE5,
+  'black': #000,
+  'white': #FFF
+);
+
+@function colors($key: 'primary') {
+  @return map-get($colors, $key);
+}
+
+//  Color tints
+
+//  Primary
+$color-primary: colors('primary');
+
+$color-primary-tinted: mix(white, $color-primary, 10%);
+$color-primary-shaded: mix(black, $color-primary, 10%);
+
+//  Accent
+$color-accent: colors('accent');
+
+$color-accent-tinted: mix(white, $color-accent, 10%);
+$color-accent-shaded: mix(black, $color-accent, 10%);
+
+//  Color shades
+$color-interval: 10% !global;
+
+@function color-level($color-name: 'primary', $level: 0) {
+  $color: colors($color-name);
+  $color-base: if($level < 0, black, white);
+
+  @return mix($color-base, $color, $level * $color-interval);
+}
+
+$color-opacity: (
+  'text': 0.87, // opacity for text
+  'light': 0.7, // opacity used with lighter colors
+  'secondary': 0.54, //opacity used on secondary text/icons
+  'dark': 0.12   // opacity used with darker colors
+);
+
+//  Alpha colors
+@function alpha-color($name: 'primary', $opacity: 0) {
+  $color: colors($name);
+
+  // Get the named opacity level, if it exists
+  @if map-key-exists($color-opacity, $opacity) {
+    $opacity: map-get($color-opacity, $opacity);
+  }
+
+  // Use rgba() to manipulate the color's alpha level
+  @return rgba($color, $opacity);
+}
+
+//  Examples of usage
+
+// Use a color
+// .example {
+//   background-color: colors('accent');
+// }
+
+// Use a shaded color
+// .example {
+//   background-color: color-level('primary', 2);
+// }
+
+// Use a transparent color
+// Example usage:
+// $button-transparent-color: alpha-color('primary', 'light');

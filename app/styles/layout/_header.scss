@@ -38,12 +38,12 @@
 }
 
 .header-links a{
-  color: $main-color;
+  color: colors('primary');
 }
 
 .active{
   padding: 20px 0px;
-  border-bottom: 2px $main-color solid;
+  border-bottom: 2px colors('primary') solid;
 }
 
 .header-links a:hover{
@@ -60,6 +60,6 @@
     padding: 17px 10px;
   }
   #header {
-    background-color: $black;
+    background-color: colors('dark');
   }
 }
