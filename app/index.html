@@ -768,20 +768,41 @@
       <!-- End of work -->
 
       <!-- Hello -->
-      <section class="hello">
-        <div class="hello-container sect" id="hello">
-          <div class="hello-hero"  data-anchor-target="#hello" data--100-top="background-position:center 0px;" data-bottom="background-position:center -200px;">
-            <div class="hello-element">
-              <div>
-                <h1>¿Quieres que <strong>hablemos?</strong></h1>
-                <div class="hello-input">
-                  <a href="mailto:hola@deltawolves.com" target="_top"><i class="fa fa-envelope-o"></i>hola@deltawolves.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section>
+				<form id="theForm" class="simform" autocomplete="off">
+					<div class="simform-inner">
+						<ol class="questions">
+							<li>
+								<span><label for="q1">¿Cómo te llamas?</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q2">¿Para quién trabajas?</label></span>
+								<input id="q2" name="q2" type="text"/>
+							</li>
+							<li>
+								<span><label for="q3">¿Cuál es tu correo?</label></span>
+								<input id="q3" name="q3" type="text"/>
+							</li>
+							<li>
+								<span><label for="q4">¿Qué nos quieres decir?</label></span>
+								<textarea id="q4" name="q4" type="text"/></textarea>
+							</li>
+						</ol><!-- /questions -->
+						<button class="submit" type="submit">Send answers</button>
+						<div class="controls">
+							<button class="next"><i class="fa fa-arrow-right"></i></button>
+							<div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+							<span class="error-message"></span>
+						</div><!-- / controls -->
+					</div><!-- /simform-inner -->
+					<span class="final-message"></span>
+				</form><!-- /simform -->
+			</section>
       <!-- End of hello -->
 
 
@@ -814,6 +835,9 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/form/classie.js"></script>
+        <script src="scripts/form/stepsForm.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
