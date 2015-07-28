@@ -333,19 +333,6 @@ module.exports = function (grunt) {
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
-        }, {
-          expand: true,
-          flatten: true,
-          cwd: 'bower_components/fontawesome/fonts',
-          dest: '<%= config.dist %>/fonts',
-          src: ['*.*'],
-          filter: 'isFile'
-        }, {
-          expand: true,
-          flatten: true,
-          cwd: 'bower_components/slick.js/slick/fonts',
-          src: '*.*',
-          dest: '<%= config.dist %>/styles/fonts'
         }]
       },
       styles: {
