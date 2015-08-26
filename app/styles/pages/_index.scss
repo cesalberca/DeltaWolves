@@ -436,7 +436,7 @@ img {
   left: 50%;
   border-style: solid;
   border-width: 20px 20px 0 20px;
-  border-color: colors('light') transparent transparent transparent;
+  border-color: colors('dark') transparent transparent transparent;
 }
 
 .who-container {
@@ -576,3 +576,39 @@ right: 20px;
 
 
 //Form
+.hello-hero {
+    height: 20rem;
+    background-image: url(../images/2.jpeg);
+    background-size: cover;
+}
+
+.hello-element {
+    height: 20rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    h1 {
+      color: colors('primary');
+    }
+}
+
+.hello-input {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    a {
+      color: white;
+      font-size: 2rem;
+    }
+}
