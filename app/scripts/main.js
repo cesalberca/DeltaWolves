@@ -17,25 +17,6 @@ $( document ).ready(function() {
 
 var theForm = document.getElementById( 'theForm' );
 
-new StepsForm( theForm, {
-  /*jshint unused:vars, indent:false */
-  onSubmit : function( form ) {
-    // hide form
-    classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-
-    /*
-    form.submit()
-    or
-    AJAX request (maybe show loading indicator while we don't have an answer..)
-    */
-
-    // let's just simulate something...
-    var messageEl = theForm.querySelector( '.final-message' );
-    messageEl.innerHTML = '¡Muchas gracias! Estaremos en contacto.';
-    classie.addClass( messageEl, 'show' );
-  }
-} );
-
   // Skrollr
   /*globals skrollr, scrollReveal */
   skrollr.init({
