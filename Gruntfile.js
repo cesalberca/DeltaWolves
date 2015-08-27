@@ -331,6 +331,18 @@ module.exports = function (grunt) {
             'styles/fonts/{,*/}*.*'
           ]
         }, {
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/fontawesome',
+            src: ['fonts/*.*'],
+            dest: '<%= config.dist %>'
+        }, {
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/slick.js/slick',
+            src: ['fonts/*.*', 'ajax-loader.gif'],
+            dest: '<%= config.dist %>/styles'
+        }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
         }]
