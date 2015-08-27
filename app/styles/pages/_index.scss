@@ -1,5 +1,7 @@
-html,body {
-  height: 100%; min-height: 100%;
+html,
+body {
+  height: 100%;
+  min-height: 100%;
 }
 
 img {
@@ -11,21 +13,20 @@ img {
 }
 
 #skrollr-body {
-    float: left;
-    width: 100%;
-    height: 100%;
+  float: left;
+  width: 100%;
+  height: 100%;
 }
 
-.wrapper-body{
+.wrapper-body {
   background-color: colors('dark');
 }
-
 
 //Hero
 .hero-web {
   height: 100%;
   width: 100%;
-  background-image: url('../images/hero-web.png');
+  background-image: url("../images/hero-web.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -43,8 +44,9 @@ img {
 
 @media (max-width:480px) {
   .hero-element {
-    left:50%;
+    left: 50%;
   }
+
   .hero-web {
     height: 60%;
   }
@@ -82,16 +84,14 @@ img {
 
 @media (max-width:480px) {
 
-
 }
-
 
 .about-element {
   padding: 4rem 0;
   @include span(8 of 12);
 }
 
-#about-element-2{
+#about-element-2 {
   float: right;
   margin: 0;
 }
@@ -102,6 +102,7 @@ img {
 
 .about p {
   color: rgba(0, 0, 0, 0.6);
+
   // color: colors('light');
   line-height: 35px;
   font-size: 1.2rem;
@@ -122,7 +123,7 @@ img {
   color: colors('light');
 }
 
-.about-element p{
+.about-element p {
   position: relative;
   z-index: 100;
 }
@@ -144,20 +145,21 @@ img {
   .about-svg-container {
     @include span(12 of 12);
   }
+
   .about-svg-container svg {
     margin: 0;
   }
+
   .about-element h1 {
     font-size: 3rem;
   }
+
   .about-element:nth-child(even) {
     @include span(12 of 12);
   }
 }
 
-
 //Who
-
 .triangle {
   width: 0;
   height: 0;
@@ -172,7 +174,7 @@ img {
   background-color: colors('dark');
 }
 
-.services-container{
+.services-container {
   padding: 5rem 0;
   @include container(80em);
 }
@@ -187,6 +189,7 @@ img {
 
 .services-element > div {
   font-size: 4rem;
+
   span {
     color: colors('primary');
   }
@@ -197,22 +200,22 @@ img {
 }
 
 .tooltipster-default {
-  padding: 0rem 2rem;
+  padding: 0 2rem;
   border: none;
   border-radius: 0;
-	background: #fff;
-	box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
-	color: #2c2c2c;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(0,0,0,0.3);
+  color: #2c2c2c;
 }
+
 .tooltipster-default .tooltipster-content {
-	font-family: $base-font-family;
-	font-size: 14px;
-	line-height: 16px;
-	padding: 8px 10px;
+  font-family: $base-font-family;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 8px 10px;
 }
 
 // process
-
 #process {
   background-color: colors('dark');
 }
@@ -227,6 +230,7 @@ img {
   position: relative;
   padding: 2em 0;
 }
+
 #process-container::before {
   /* this is the vertical line */
   content: '';
@@ -237,6 +241,7 @@ img {
   width: 4px;
   background: colors('accent');
 }
+
 @media only screen and (min-width: 1170px) {
   #process-container::before {
     left: 50%;
@@ -248,24 +253,30 @@ img {
   position: relative;
   margin: 2em 0;
 }
+
 .process-block:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .process-block:first-child {
   margin-top: 0;
 }
+
 .process-block:last-child {
   margin-bottom: 0;
 }
+
 @media only screen and (min-width: 1170px) {
   .process-block {
     margin: 4em 0;
   }
+
   .process-block:first-child {
     margin-top: 0;
   }
+
   .process-block:last-child {
     margin-bottom: 0;
   }
@@ -280,15 +291,19 @@ img {
   border-radius: 50%;
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
+
 .process-img.picture {
   background: colors('primary');
 }
+
 .process-img.movie {
   background: colors('primary');
 }
+
 .process-img.location {
   background: colors('primary');
 }
+
 @media only screen and (min-width: 1170px) {
   .process-img {
     width: 20px;
@@ -309,33 +324,39 @@ img {
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
 }
+
 .process-content:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .process-content h2 {
   color: alpha-color('black', 'text');
 }
-.process-content p, .process-content .date {
-  font-size: 13px;
-  font-size: 0.8125rem;
-}
+
+// .process-content p,
+// .process-content .date {
+//   font-size: 13px;
+//   font-size: 0.8125rem;
+// }
+
 .process-content .date {
   display: inline-block;
 }
+
 .process-content p {
   margin: 1em 0;
   line-height: 1.6;
 }
 
-
 .process-content .date {
   float: left;
-  padding: .8em 0;
-  opacity: .7;
+  padding: 0.8em 0;
+  opacity: 0.7;
   color: colors('accent');
 }
+
 .process-content::before {
   content: '';
   position: absolute;
@@ -346,22 +367,26 @@ img {
   border: 7px solid transparent;
   border-right: 7px solid white;
 }
+
 @media only screen and (min-width: 768px) {
   .process-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
+
   .process-content p {
     font-size: 16px;
     font-size: 1rem;
   }
 }
+
 @media only screen and (min-width: 1170px) {
   .process-content {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
   }
+
   .process-content::before {
     top: 24px;
     left: 100%;
@@ -377,9 +402,11 @@ img {
     font-size: 16px;
     font-size: 5rem;
   }
+
   .process-block:nth-child(even) .process-content {
     float: right;
   }
+
   .process-block:nth-child(even) .process-content::before {
     top: 24px;
     left: auto;
@@ -394,9 +421,8 @@ img {
     text-align: right;
   }
 }
+
 //End of process
-
-
 //Testimonies
 
 #testimonies {
@@ -420,12 +446,10 @@ img {
   color: alpha-color('black', 'text');
 }
 
-
 //End of testimonies
-
-
 //Who
-.who{
+
+.who {
   background-color: colors('light');
 }
 
@@ -441,7 +465,7 @@ img {
 
 .who-container {
   height: 20rem;
-  background-image: url('../images/who.png');
+  background-image: url("../images/who.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -466,14 +490,8 @@ img {
   padding: 2rem 4rem;
 }
 
-
-.who-element p {
-  line-height: 35px;
-  font-size: 1rem;
-}
-
 .who-element i {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 @media (max-width: 480px) {
@@ -481,11 +499,11 @@ img {
     @include container(24em);
     padding: 0;
   }
+
   .who-hero h3 {
     font-size: 2rem;
   }
 }
-
 
 //Values
 .values {
@@ -496,9 +514,10 @@ img {
 
 .values-hero {
   @include container(100%);
+  background-color: colors('dark');
 }
 
-.values-hero img{
+.values-hero img {
   width: 100%;
   height: auto;
   margin: 0;
@@ -522,12 +541,11 @@ img {
 }
 
 .values ul {
-  list-style:none;
-right: 20px;
+  list-style: none;
+  right: 20px;
   position: relative;
   top: -65px;
 }
-
 
 .values li span {
   font-size: 1.25rem;
@@ -543,9 +561,7 @@ right: 20px;
     @include span(10 of 12);
     float: right;
   }
-
 }
-
 
 //Work
 .work {
@@ -568,47 +584,93 @@ right: 20px;
   .work {
     @include container(24em);
   }
-  .work-element p{
+
+  .work-element p {
     font-size: 1rem;
     line-height: 30px;
   }
 }
 
+// -------------------------------------
+// Events
+// -------------------------------------
+
+#events {
+  background-color: #fff;
+}
+
+.events {
+  background-color: white;
+  margin-top: 80px;
+  h1 {
+    text-align: center;
+  }
+  p {
+    margin-top: 400px;
+    color: colors('dark');
+    line-height: 35px;
+    font-size: 1.2rem;
+  }
+}
+
+.events-images img {
+  padding: 0;
+  margin: 0;
+  @include span(4);
+  &:last-child {
+    @include span(4 last);
+  }
+}
+
+.events-element {
+  @include container(40rem);
+  margin-bottom: 10rem;
+}
+
+@media (max-width:480px) {
+  .events-images img{
+    @include span(100%);
+      &:last-child {
+      @include span(100% last);
+    }
+  }
+}
 
 //Form
 .hello-hero {
-    height: 20rem;
-    background-image: url(../images/2.jpeg);
-    background-size: cover;
+  height: 20rem;
+  background-image: url("../images/2.jpeg");
+  background-size: cover;
 }
 
 .hello-element {
-    height: 20rem;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: rgba(0,0,0,.5);
-    h1 {
-      color: colors('primary');
-    }
+  height: 20rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+
+  h1 {
+    color: colors('primary');
+  }
 }
 
 .hello-input {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-    a {
-      color: white;
-      font-size: 2rem;
-    }
+  a {
+    color: white;
+    font-size: 2rem;
+  }
 }

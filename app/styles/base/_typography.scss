@@ -25,7 +25,8 @@ body {
 p {
   color: alpha-color('dark', 'text');
   font-family: $base-font-family;
-  line-height: 1.6;
+  line-height: 35px;
+  font-size: 1.2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
