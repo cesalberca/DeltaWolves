@@ -132,7 +132,7 @@ var lastId,
 // so we can get a fancy scroll animation
 menuItems.click(function(e) {
   var href = $(this).attr('href'),
-    offsetTop = href === '#' ? 0 : $(href).offset().top - topMenuHeight + 1;
+    offsetTop = href === '/#' ? 0 : $(href).offset().top - topMenuHeight + 1;
   $('html, body').stop().animate({
     scrollTop: offsetTop
   }, 300);
@@ -159,6 +159,6 @@ $(window).scroll(function() {
     // Set/remove active class
     menuItems
       .parent().removeClass('active')
-      .end().filter('[href=#' + id + ']').parent().addClass('active');
+      .end().filter('[href=/#' + id + ']').parent().addClass('active');
   }
 });

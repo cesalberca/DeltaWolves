@@ -8,16 +8,9 @@
   position: fixed;
 }
 
-#header .logo-container {
-  position: relative;
-}
-
 #header .logo {
-  margin-left: 30px;
-  position: absolute;
-  top: 65%;
+  align: center;
   height: 42px;
-  margin-top: 12px;
 }
 
 #header ul {
@@ -53,6 +46,10 @@
   border-bottom: 2px rgba(247, 188, 28, 1) solid;
 }
 
+.nav-collapse ul {
+  display: inline-flex;
+}
+
 
 @media (max-width:480px) {
   .header-links li {
@@ -61,5 +58,21 @@
   }
   #header {
     background-color: colors('dark');
+    padding: 20px 0;
+    padding-left: 10px;
+
+    a {
+      color: colors('primary');
+    }
   }
+
+  .logo {
+    display: none;
+  }
+
+
+  .nav-collapse ul {
+    display: block;
+  }
+
 }

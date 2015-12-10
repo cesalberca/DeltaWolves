@@ -44,7 +44,7 @@ img {
 
 @media (max-width:480px) {
   .hero-element {
-    left: 50%;
+    display: none;
   }
 
   .hero-web {
@@ -213,6 +213,28 @@ img {
   font-size: 14px;
   line-height: 16px;
   padding: 8px 10px;
+  p {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tooltipster-default {
+    padding: 0 1rem;
+  }
+
+  .tooltipster-default .tooltipster-content {
+    padding: 4px 5px;
+    h3 {
+      padding: 0;
+      font-size: 20px;
+    }
+    p {
+      font-size: 10px;
+      line-height: 12px;
+
+    }
+  }
 }
 
 // process
@@ -616,6 +638,7 @@ img {
 .events-images img {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   @include span(4);
   &:last-child {
     @include span(4 last);

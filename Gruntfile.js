@@ -80,6 +80,7 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
+          open: false,
           middleware: function(connect) {
             return [
               connect.static('.tmp'),
@@ -87,6 +88,12 @@ module.exports = function (grunt) {
               connect.static(config.app)
             ];
           }
+        }
+      },
+      open: {
+        dev: {
+            url: 'http://localhost:<%= connect.options.port %>',
+            app: 'Google Chrome'
         }
       },
       test: {
